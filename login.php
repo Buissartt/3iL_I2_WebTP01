@@ -14,13 +14,13 @@ if(isset($_POST["submit"])) {
 			session_start();
 			$_SESSION['username'] = $utilisateur["username"];
 			$_SESSION['is_admin'] = $utilisateur["is_admin"];
-			header("Location: /tpweb/index.php");
+			header("Location: index.php");
 		} else {
-			header("Location: /tpweb/login.php?connexion=echouee");
+			header("Location: login.php?connexion=echouee");
 		}
 
 	} else {
-			header("Location: /tpweb/login.php?connexion=echouee");
+			header("Location: login.php?connexion=echouee");
 	}
 }
 
@@ -63,9 +63,9 @@ if(isset($_POST["submit"])) {
 				<div class="text-right">
 					<?php if(isset($_SESSION["username"])) : ?>
 						<span class="text-uppercase font-weight-bold text-white"><?= $_SESSION["username"]; ?></span>
-						<a href="/tpweb/logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+						<a href="logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 					<?php else : ?>
-						<a href="/tpweb/login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+						<a href="login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					<?php endif; ?>
 				</div>
 			</div>

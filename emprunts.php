@@ -41,9 +41,9 @@
 				<div class="text-right">
 					<?php if(isset($_SESSION["username"])) : ?>
 						<span class="text-uppercase font-weight-bold text-white"><?= $_SESSION["username"]; ?></span>
-						<a href="/tpweb/logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+						<a href="logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 					<?php else : ?>
-						<a href="/tpweb/login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+						<a href="login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -103,7 +103,7 @@
 							</td>
 							<td>
 								<?php if($emprunts[$i]["date_restitution"] == ""): ?>
-									<a href="/tpweb/restituer.php?id=<?= $emprunts[$i]["id"]; ?>" ><button class="btn btn-info btn-sm" type="button">Restituer</button></a>
+									<a href="restituer.php?id=<?= $emprunts[$i]["id"]; ?>" ><button class="btn btn-info btn-sm" type="button">Restituer</button></a>
 								<?php endif; ?>
 							</td>
 						</tr>

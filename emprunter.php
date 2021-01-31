@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 								   NULL
 								  ]);
 
-	header("Location: /tpweb/emprunter.php?insertion=succes");
+	header("Location: /3iL_I2_WebTP01/emprunter.php?insertion=succes");
 } 
 ?>
 
@@ -71,9 +71,9 @@ if(isset($_POST['submit'])){
 				<div class="text-right">
 					<?php if(isset($_SESSION["username"])) : ?>
 						<span class="text-uppercase font-weight-bold text-white"><?= $_SESSION["username"]; ?></span>
-						<a href="/tpweb/logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+						<a href="logout.php" class="badge badge-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 					<?php else : ?>
-						<a href="/tpweb/login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+						<a href="login.php" class="badge badge-success"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					<?php endif; ?>
 				</div>
 			</div>
